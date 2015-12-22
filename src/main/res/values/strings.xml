@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Camille_Castillo_Projet_Android_Final</string>
+    <string name="app_name">Projet Androïd - Camille Castillo</string>
+    <string name="tab_camera">Tab Camera</string>
+    <string name="tab_web">Tab Web</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
