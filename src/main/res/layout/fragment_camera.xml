@@ -10,4 +10,14 @@
         android:gravity="center"
         android:text="@string/tab_camera" />
 
+        <Button
+            android:id="@+id/btnPicture"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="200dp"
+            android:background="#FFCC00"
+            android:text="Take Picture"
+            android:layout_gravity="center_horizontal|top" />
+
 </FrameLayout>
