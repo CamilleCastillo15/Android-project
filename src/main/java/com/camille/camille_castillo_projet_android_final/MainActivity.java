@@ -87,7 +87,15 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             // For simplicity of this tutorial this string is hardcoded
             // Otherwise it should be access using string resource
-            return "Tab " + (position + 1);
+            switch (position) {
+                case 0:
+                    return "Camera Tab";
+                case 1:
+                    return "Web tab";
+                default:
+                    return "null";
+            }
+
         }
 
     }
