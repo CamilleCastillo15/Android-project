@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        //Cette méthode renvoie les tires des tabs en fonction de leurs positions
         @Override
         public CharSequence getPageTitle(int position) {
-            // For simplicity of this tutorial this string is hardcoded
-            // Otherwise it should be access using string resource
+
             switch (position) {
                 case 0:
                     return "Camera Tab";
