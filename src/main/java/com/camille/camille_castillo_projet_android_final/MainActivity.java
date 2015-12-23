@@ -83,6 +83,13 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        @Override
+        public CharSequence getPageTitle(int position) {
+            // For simplicity of this tutorial this string is hardcoded
+            // Otherwise it should be access using string resource
+            return "Tab " + (position + 1);
+        }
+
     }
 
 }
