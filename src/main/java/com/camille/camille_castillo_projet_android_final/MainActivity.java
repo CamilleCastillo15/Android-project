@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     public static class TabsPagerAdapter extends FragmentPagerAdapter {
 
         // Un entier représentant le nombre de fragments existants et appeléss
-        private static final int nbr_fragments = 2;
+        private static final int nbr_fragments = 3;
 
         //Le constructeur de la classe
         public TabsPagerAdapter(FragmentManager fm) {
@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                     return new CameraFragment();
                 case 1:
                     return new WebFragment();
+                case 2:
+                    return new PDFFragment();
                 default:
                     return null;
             }
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Camera Tab";
                 case 1:
                     return "Web tab";
+                case 2:
+                    return "PDF tab";
                 default:
                     return "null";
             }

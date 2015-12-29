@@ -7,6 +7,16 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <provider
+        android:name=".PDFFragment"
+        android:authorities="com.camille.camille_castillo_projet_android_final"
+        android:exported="true" />
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21"
+        />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
