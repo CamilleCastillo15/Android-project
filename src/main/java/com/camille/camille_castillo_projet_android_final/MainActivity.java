@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Web tab";
                 case 2:
                     return "PDF tab";
+                case 3:
+                    return "SQLite Tab";
                 default:
                     return "null";
             }

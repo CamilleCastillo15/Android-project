@@ -10,4 +10,57 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/textView"
+        android:layout_gravity="left|center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Surname"
+        android:id="@+id/textView2"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Marks"
+        android:id="@+id/textView3"
+        android:layout_gravity="right|center_vertical" />
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_name"
+        android:layout_marginBottom="200dp"
+        android:layout_gravity="left|bottom" />
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_surname"
+        android:layout_marginBottom="200dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_marks"
+        android:layout_marginBottom="200dp"
+        android:layout_gravity="right|bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        android:id="@+id/button_add"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal|top" />
+
 </FrameLayout>
