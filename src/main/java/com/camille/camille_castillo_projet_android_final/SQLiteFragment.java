@@ -50,6 +50,7 @@ public class SQLiteFragment extends Fragment {
 
         AddData();
         viewAll();
+        UpdateData();
 
         return _vue;
     }
@@ -62,7 +63,13 @@ public class SQLiteFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
 
-                        boolean isUpdated = myDb.updateData();
+                        boolean isUpdated = myDb.updateData(editTextId.getText().toString(),
+                                                            editName.getText().toString(),
+                                                            editSurname.getText().toString(),
+                                                            editMarks.getText().toString());
+
+                        if(isUpdated) Toast.makeText(getActivity(), "Les données sont mises à jour", Toast.LENGTH_LONG).show();
+                        else Toast.makeText(getActivity(), "Les données ne sont pas mises à jour", Toast.LENGTH_LONG).show();
 
                     }
                 }
