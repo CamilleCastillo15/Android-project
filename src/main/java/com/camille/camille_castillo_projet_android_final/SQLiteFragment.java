@@ -42,7 +42,7 @@ public class SQLiteFragment extends Fragment {
         editSurname.clearFocus();
         editMarks = (EditText)_vue.findViewById(R.id.editText_marks);
         editMarks.clearFocus();
-        editMarks = (EditText)_vue.findViewById(R.id.editText_id);
+        editTextId = (EditText)_vue.findViewById(R.id.editText_id);
 
         btnAddData = (Button)_vue.findViewById(R.id.button_add);
         btnviewAll = (Button)_vue.findViewById(R.id.button_viewall);
