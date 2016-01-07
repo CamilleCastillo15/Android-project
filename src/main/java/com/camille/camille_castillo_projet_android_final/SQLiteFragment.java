@@ -22,6 +22,7 @@ public class SQLiteFragment extends Fragment {
     Button btnAddData;
     Button btnviewAll;
     Button btnUpdate;
+    Button btnDelete;
 
     public SQLiteFragment() {
         // Required empty public constructor
@@ -47,12 +48,34 @@ public class SQLiteFragment extends Fragment {
         btnAddData = (Button)_vue.findViewById(R.id.button_add);
         btnviewAll = (Button)_vue.findViewById(R.id.button_viewall);
         btnUpdate = (Button)_vue.findViewById(R.id.button_update);
+        btnDelete = (Button)_vue.findViewById(R.id.button_delete);
 
         AddData();
         viewAll();
         UpdateData();
+        DeleteData();
 
         return _vue;
+    }
+
+    public void DeleteData(){
+
+        btnDelete.setOnClickListener(
+
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Integer deletedRows = myDb.deleteData(editTextId.getText().toString());
+
+                        if(deletedRows > 0) Toast.makeText(getActivity(), "Les données ont été supprimées", Toast.LENGTH_LONG).show();
+                        else Toast.makeText(getActivity(), "Les données n'ont pas été supprimées", Toast.LENGTH_LONG).show();
+
+                    }
+                }
+
+        );
+
     }
 
     public void UpdateData(){
