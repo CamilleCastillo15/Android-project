@@ -2,6 +2,7 @@ package com.camille.camille_castillo_projet_android_final;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -53,6 +54,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if(result == -1) return false;
         else return true;
+
+    }
+
+    public Cursor getAllData(){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME, null);
+
+        //Retour de la fonction (cursor)
+        return res;
+
+    }
+
+    public boolean updateData(String id, String name, String surname, String marks) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(COL_1, id);
+        contentValues.put(COL_2, name);
+        contentValues.put(COL_3, surname);
+        contentValues.put(COL_4, marks);
+
+        //4 arguments pour updater une table de la BDD
+        //nom de la table, la colonne à modifier et son contenu, la condition
+        db.update(TABLE_NAME, contentValues, "ID == ?", new String[] {id});
+
+        return true;
 
     }
 

@@ -63,4 +63,36 @@
         android:layout_marginTop="200dp"
         android:layout_gravity="center_horizontal|top" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View all"
+        android:id="@+id/button_viewall"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="right|top" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/button_update"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="left|top" />
+
+    <EditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_id"
+        android:layout_marginBottom="100dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Id"
+        android:id="@+id/textView_id"
+        android:layout_marginBottom="130dp"
+        android:layout_gravity="center_horizontal|bottom" />
+
 </FrameLayout>
