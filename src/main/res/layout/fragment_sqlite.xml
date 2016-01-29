@@ -7,24 +7,24 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Data"
-        android:id="@+id/button_add"
+        android:text="Ajouter"
+        android:id="@+id/button_ajouter"
         android:layout_marginTop="300dp"
         android:layout_gravity="center_horizontal|top" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View all"
-        android:id="@+id/button_viewall"
+        android:text="Voir"
+        android:id="@+id/button_voir"
         android:layout_marginTop="300dp"
         android:layout_gravity="right|top" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update"
-        android:id="@+id/button_update"
+        android:text="MAJ"
+        android:id="@+id/button_maj"
         android:layout_marginTop="300dp"
         android:layout_gravity="left|top" />
 
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Name"
+        android:text="Nom"
         android:id="@+id/textView"
         android:layout_marginTop="110dp"
         android:layout_gravity="left|top" />
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Surname"
+        android:text="Prénom"
         android:id="@+id/textView2"
         android:layout_marginTop="150dp"
         android:layout_gravity="left|top" />
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Marks"
+        android:text="Notes"
         android:id="@+id/textView3"
         android:layout_marginTop="190dp"
         android:layout_gravity="left|top" />
@@ -67,21 +67,21 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_name"
+        android:id="@+id/editText_nom"
         android:layout_marginTop="110dp"
         android:layout_gravity="center_horizontal|top" />
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_surname"
+        android:id="@+id/editText_prénom"
         android:layout_marginTop="150dp"
         android:layout_gravity="center_horizontal|top" />
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_marks"
+        android:id="@+id/editText_notes"
         android:layout_marginTop="190dp"
         android:layout_gravity="center_horizontal|top" />
 
@@ -96,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delete"
-        android:id="@+id/button_delete"
+        android:id="@+id/button_supprimer"
         android:layout_marginTop="100dp"
         android:layout_gravity="center" />
 

@@ -46,16 +46,17 @@ public class SQLiteFragment extends Fragment {
         myDb = new DatabaseHelper(this.getActivity());
 
         //Les instances d'editTexts sont reliés aux boutons du layout
-        editName = (EditText)_vue.findViewById(R.id.editText_name);
-        editSurname = (EditText)_vue.findViewById(R.id.editText_surname);
-        editMarks = (EditText)_vue.findViewById(R.id.editText_marks);
+
+        editName = (EditText)_vue.findViewById(R.id.editText_nom);
+        editSurname = (EditText)_vue.findViewById(R.id.editText_prénom);
+        editMarks = (EditText)_vue.findViewById(R.id.editText_notes);
         editTextId = (EditText)_vue.findViewById(R.id.editText_id);
 
         //Pareil pour les boutons
-        btnAddData = (Button)_vue.findViewById(R.id.button_add);
-        btnviewAll = (Button)_vue.findViewById(R.id.button_viewall);
-        btnUpdate = (Button)_vue.findViewById(R.id.button_update);
-        btnDelete = (Button)_vue.findViewById(R.id.button_delete);
+        btnAddData = (Button)_vue.findViewById(R.id.button_ajouter);
+        btnviewAll = (Button)_vue.findViewById(R.id.button_voir);
+        btnUpdate = (Button)_vue.findViewById(R.id.button_maj);
+        btnDelete = (Button)_vue.findViewById(R.id.button_supprimer);
 
         //Les méthodes d'ajouts, de vu, de mis à jour ou encore de suppresion sont exécutés au lancement du fragment
         AddData();
