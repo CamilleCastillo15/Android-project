@@ -42,12 +42,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         //execSQL indique une requête que la BDD va exécuter dès qu'elle est crée
-        //Ici une table portant le nom de notre va être crée,
+        //Ici une table portant le nom de notre table va être crée,
         //Un + qui est un opérateur de concaténation marque la différence entre TABLE_NAME qui est une variable Java, et le reste, de type String
         // prenant comme colonne ID de type entier, qui s'autoincrémente et est clé primaire,
-        //Name de type text,
-        //Surname de type text,
-        //Et marks de type entier
+        //NOM de type text,
+        //PRENOM de type text,
+        //Et NOTES de type entier
         db.execSQL("create table " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOM TEXT, PRENOM TEXT, NOTES INTEGER) ");
 
     }
