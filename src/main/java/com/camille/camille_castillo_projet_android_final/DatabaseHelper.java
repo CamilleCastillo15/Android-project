@@ -17,15 +17,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Pour créer une Base de Données avec Androïd, nous avons besoin tout d'abord d'un nom pour la BDD
     //Ce nom sera un attribut de notre classe, tout comme le nom de la table et des colonnes
-    public static final String DATABASE_NAME = "student.db";
+    public static final String DATABASE_NAME = "etudiants.db";
     //Ensuite un nom de table
-    public static final String TABLE_NAME = "student_table";
+    public static final String TABLE_NAME = "etudiants_table";
     //Et un nom pour chaque colonne
     //ID représente la clé primaire de la table
     public static final String COL_1 = "ID";
-    public static final String COL_2 = "NAME";
-    public static final String COL_3 = "SURNAME";
-    public static final String COL_4 = "MARKS";
+    public static final String COL_2 = "NOM";
+    public static final String COL_3 = "PRENOM";
+    public static final String COL_4 = "NOTES";
 
     public DatabaseHelper(Context contex){
 
@@ -48,7 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //Name de type text,
         //Surname de type text,
         //Et marks de type entier
-        db.execSQL("create table " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, SURNAME TEXT, MARKS INTEGER) ");
+        db.execSQL("create table " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, NOM TEXT, PRENOM TEXT, NOTES INTEGER) ");
 
     }
 
@@ -65,7 +65,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Méthode pour insérer des données dans la BDD
     //Elle prend en argument toutes les colonnes sauf ID qui va être crée automatiquement
-    public boolean insertData(String name, String surname, String marks){
+    public boolean insertData(String nom, String prenom, String notes){
 
         //Une instance de SQLiteDatabase est crée, nommée db
         //Cette BDD pourra être modifiée (writable)
@@ -78,9 +78,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         //Ici on range donc dans contentvalues chaque donnée de colonne,
         // avec le nom de la colonne
-        contentValues.put(COL_2, name);
-        contentValues.put(COL_3, surname);
-        contentValues.put(COL_4, marks);
+        contentValues.put(COL_2, nom);
+        contentValues.put(COL_3, prenom);
+        contentValues.put(COL_4, notes);
 
         //insert prend 3 paramètres,
         // le nom de table,
@@ -117,7 +117,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean updateData(String id, String name, String surname, String marks) {
+    public boolean updateData(String id, String nom, String prenom, String notes) {
 
         //Une instance de SQLiteDatabase est crée, nommée db
         //Cette BDD pourra être modifiée (writable)
@@ -131,9 +131,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //Ici on range donc dans contentvalues chaque donnée de colonne,
         // avec le nom de la colonne
         contentValues.put(COL_1, id);
-        contentValues.put(COL_2, name);
-        contentValues.put(COL_3, surname);
-        contentValues.put(COL_4, marks);
+        contentValues.put(COL_2, nom);
+        contentValues.put(COL_3, prenom);
+        contentValues.put(COL_4, notes);
 
         //4 arguments pour updater une table de la BDD
         //nom de la table, la colonne à modifier et son contenu, la condition

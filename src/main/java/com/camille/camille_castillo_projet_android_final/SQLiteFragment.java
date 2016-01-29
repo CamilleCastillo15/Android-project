@@ -164,7 +164,7 @@ public class SQLiteFragment extends Fragment {
 
                             //Cela va créer un messaage d'erreur
                             //Renvoyé par la fonction showMessage
-                            showMessage("Error", "Nothing found");
+                            showMessage("Erreur", "Rien n'a été trouvé");
                             //La fonction s'arrête
                             return;
 
@@ -184,11 +184,11 @@ public class SQLiteFragment extends Fragment {
                             //+ \n qui permet un retour à la ligne,
 
                             buffer.append("Id : " + res.getString(0) + "\n");
-                            buffer.append("Name : "+ res.getString(1)+ "\n");
-                            buffer.append("Surname : "+ res.getString(2)+ "\n");
+                            buffer.append("Nom : "+ res.getString(1)+ "\n");
+                            buffer.append("Prénom : "+ res.getString(2)+ "\n");
 
                             //Ou quand il est double, un saut de ligne
-                            buffer.append("Marks : "+ res.getString(3)+ "\n\n");
+                            buffer.append("Notes : "+ res.getString(3)+ "\n\n");
 
                         }
 
